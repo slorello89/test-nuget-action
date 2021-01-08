@@ -9,8 +9,7 @@ jobs:
     steps:
       - run: sudo apt-get update; sudo apt-get install -y apt-transport-https && sudo apt-get update && sudo apt-get install -y dotnet-sdk-5.0
       - run: npm install xml2js
-      - run: npm install child_process
-      - run: npm ci
+      - run: npm install child_process      
       - name: Release Nuget
         uses: nexmo/github-actions/nuget-release@nuget-release
         env:
