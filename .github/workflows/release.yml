@@ -1,0 +1,20 @@
+name: Nuget Release
+
+on:
+  release:
+    types: [published]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Release Nuget
+        uses: nexmo/github-actions/nuget-release@nuget-release
+        env:
+          PROJECT_FILE : NugetActionTest.csproj
+          VERSION : ${{ github.event.release.tag_name }}
+          BRANCH: main
+          ORGANIZATION: slorello89
+          REPO: test-nuget-action
+          TAG: ${{ github.event.release.tag_name }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
