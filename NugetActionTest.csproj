@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.3.9</Version>
-    <PackageReleaseNotes>https://github.com/slorello89/test-nuget-action/releases/tag/v0.3.9</PackageReleaseNotes>
+    <Version>0.3.10</Version>
+    <PackageReleaseNotes>https://github.com/slorello89/test-nuget-action/releases/tag/v0.3.10</PackageReleaseNotes>
   </PropertyGroup>
 </Project>
