@@ -9,15 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.release.target_commitish }}
-      - run: sudo apt-get update; sudo apt-get install -y apt-transport-https && sudo apt-get update && sudo apt-get install -y dotnet-sdk-5.0
-      - name: Use Node.js 12
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-      - run: npm install xml2js
-      - run: npm install child_process      
+          ref: ${{ github.event.release.target_commitish }}      
       - name: Release Nuget
         uses: nexmo/github-actions/nuget-release@nuget-release
         env:
